@@ -59,7 +59,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin' # or 'zulu', 'adopt', etc.
-          java-version: '17'
+          java-version: '11'
           cache: 'maven'
       - name: Run Tests
         run: mvn test
