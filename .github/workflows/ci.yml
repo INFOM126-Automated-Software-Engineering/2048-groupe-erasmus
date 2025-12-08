@@ -3,9 +3,15 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
   pull_request: # Trigger on pull requests to main branch
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
   workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
