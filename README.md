@@ -7,7 +7,17 @@ This Java implementation of this game uses Maven for build and dependency manage
 - Maven (3.6.0 or higher)
 
 ## Getting Started
-TODO
+To run this project, you first need to download the code for the project. For this clone, this repository with the command:
+    
+    git clone https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus.git
+
+Then, you need to build the project with the command:
+
+    mvn clean install
+
+Now, you can run the game with:
+
+    mvn exec:java '-Dexec.mainClass=be.unamur.game2048.Game'
 
 ## Contact
 To contact us for any questions / issues, please contact us on GitHub 
