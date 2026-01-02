@@ -34,6 +34,8 @@ mvn exec:java '-Dexec.mainClass=be.unamur.game2048.Game'
 ## Contributing
 If you want to contribute to the project, please feel free to read our [contributor guide](CONTRIBUTING.md).
 
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
 ## Reporting Issues
 ### Security vulnerabilities
 If you discover a security vulnerability, **please do not open a public issue**.

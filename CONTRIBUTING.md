@@ -1,6 +1,10 @@
 # Contributing to 2048
 
-Thank you for contributing! Please follow these guidelines:
+Thank you for contributing!
+
+Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+Please follow these guidelines to keep the project organized and secure:
 
 ## Reporting Issues
 
