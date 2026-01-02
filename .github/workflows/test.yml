@@ -1,0 +1,30 @@
+name: Java Tests
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    name: Java Tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      # Copie code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup environnement java
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # Lance les tests java
+      - name: Run tests
+        run: mvn test
