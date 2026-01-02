@@ -69,6 +69,19 @@ Types:
 - `test`: adding or updating tests
 - `chore`: build process or auxiliary tools
 
+## Coding Standards
+- **Java 11+** compatible
+- 4-space indentation
+- Maximum line length: 120 characters
+- Braces required for all control structures
+- No tab characters
+- CamelCase for classes, lowerCamelCase for methods/variables
+- Javadoc comments for public classes/methods
+- Imports must be ordered and separated
+- No unused imports
+- Use **Maven** for build and dependency management
+- Include unit tests for new functionality
+
 ## Security
 - If you discover a security vulnerability, **do not open a public issue**
 - Follow the process in [SECURITY.md](SECURITY.md) to report security issues responsibly
