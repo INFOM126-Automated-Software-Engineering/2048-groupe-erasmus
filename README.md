@@ -40,7 +40,7 @@ If you discover a security vulnerability, **please do not open a public issue**.
 Instead, follow the responsible disclosure process described in [SECURITY.md](SECURITY.md).
 
 ### Reporting Bugs
-For non-security related bugs, please open a GitHub issue and use the **Bug Report** template.
+For non-security related bugs, please open a GitHub issue and use the **Bug Report** [template](.github/ISSUE_TEMPLATE/bug_report.md).
 
 ## Contact
 To contact us for any questions / issues, please contact us on GitHub 

@@ -23,4 +23,4 @@ Please include:
 We will respond as quickly as possible.
 
 ## Reporting Bugs
-For non-security related bugs, please open a GitHub issue and use the **Bug Report** template.
+For non-security related bugs, please open a GitHub issue and use the **Bug Report** [template](.github/ISSUE_TEMPLATE/bug_report.md).
