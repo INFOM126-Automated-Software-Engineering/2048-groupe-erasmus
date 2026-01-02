@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <!-- Encodage des fichiers -->
+    <property name="charset" value="UTF-8"/>
+
+    <!-- Affiche le nom des fichiers -->
+    <property name="severity" value="error"/>
+
+    <!-- Vérifie la fin de ligne -->
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- Pas de tabulations -->
+    <module name="FileTabCharacter"/>
+
+    <!-- Vérifie les imports -->
+    <module name="TreeWalker">
+
+        <!-- Imports inutilisés -->
+        <module name="UnusedImports"/>
+
+        <!-- Imports ordonnés -->
+        <module name="ImportOrder">
+            <property name="ordered" value="true"/>
+            <property name="separated" value="true"/>
+            <property name="option" value="top"/>
+        </module>
+
+        <!-- Longueur max des lignes -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+
+        <!-- Accolades obligatoires -->
+        <module name="NeedBraces"/>
+
+        <!-- Indentation -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="braceAdjustment" value="0"/>
+            <property name="caseIndent" value="4"/>
+        </module>
+
+        <!-- Nommage des classes -->
+        <module name="TypeName"/>
+
+        <!-- Nommage des méthodes -->
+        <module name="MethodName"/>
+
+        <!-- Nommage des variables -->
+        <module name="LocalVariableName"/>
+
+        <!-- Nommage des constantes -->
+        <module name="ConstantName"/>
+
+    </module>
+</module>
