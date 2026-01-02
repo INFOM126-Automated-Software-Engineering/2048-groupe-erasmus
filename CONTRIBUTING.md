@@ -82,6 +82,22 @@ Types:
 - Use **Maven** for build and dependency management
 - Include unit tests for new functionality
 
+## Release Policy
+- Releases follow **semantic versioning**: `vMAJOR.MINOR.PATCH`
+- **Release cadence**:
+    - Patch releases: bug fixes -> as needed
+    - Minor releases: new features -> monthly or bi-monthly
+    - Major releases: breaking changes -> rare, announced in advance
+
+Steps:
+1. Ensure all features and bugfixes are merged into main
+2. Create a `release/<version>` branch from `main` to finalize the release and apply any last-minute bug fixes
+3. Run all tests and CI workflow on the release branch
+4. Update documentation if needed
+5. Merge the release branch back into `main`
+6. Tag the release on `main` with `vMAJOR.MINOR.PATCH`
+7. Delete the `release/<version>` branch
+
 ## Security
 - If you discover a security vulnerability, **do not open a public issue**
 - Follow the process in [SECURITY.md](SECURITY.md) to report security issues responsibly
