@@ -8,6 +8,9 @@ labels: bug
 |---|---|---|---|
 | Bug Report | Report a reproducible bug | Non-security related issues | bug |
 
+> ⚠️ Security issues should NOT be reported here.  
+> Please follow the process described in SECURITY.md.
+
 ## Describe the bug
 A clear and concise description of the problem.
 
