@@ -1,0 +1,37 @@
+name: Code Coverage
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  coverage:
+    name: Code Coverage
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      # Copie code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup environnement java
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # Analyse du code
+      - name: Run tests with coverage
+        run: mvn clean verify
+
+      # Écriture du rapport
+      - name: Upload JaCoCo report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: target/site/jacoco
