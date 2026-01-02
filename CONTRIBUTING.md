@@ -26,11 +26,27 @@ Please follow these guidelines to keep the project organized and secure:
 
 ## Branch Management
 
-- **Main branch**: `main` → always protected, only merge via PR
-- **Feature branches**: `feature/<short-description>` → for new features
-- **Bugfix branches**: `bugfix/<short-description>` → for bug fixes
-- **Release branches**: `release/<version>` → for preparing a release
-- **Hotfix branches**: `hotfix/<version>` → urgent fixes to main
+- **Branches**:
+  - **Main branch**:
+    - `main`
+    - Always protected
+    - Only merge via PR
+  - **Feature branches**:
+    - `feature/<short-description>`
+    - For new features
+  - **Bugfix branches**:
+    - `bugfix/<short-description>`
+    - For bug fixes
+  - **Release branches**:
+    - `release/<version>`
+    - For preparing a release
+  - **Hotfix branches**:
+    - `hotfix/<version>`
+    - For urgent fixes to `main`
+- **Conditions for merging into** `main`:
+  - Only via Pull Request (PR)
+  - Must pass all unit tests and CI workflow
+  - Reviewed via PR and approved by at least one maintainer
 - Delete branches after merge to keep the repo clean
 - Tag releases following semantic versioning: `vMAJOR.MINOR.PATCH` (e.g., `v1.0.0`)
 
