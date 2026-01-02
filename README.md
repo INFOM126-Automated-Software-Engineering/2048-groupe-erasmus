@@ -37,7 +37,7 @@ If you want to contribute to the project, please feel free to read our [contribu
 ## Reporting Issues
 ### Security vulnerabilities
 If you discover a security vulnerability, **please do not open a public issue**.
-Instead, follow the responsible disclosure process described in [SECURITY.md](SECURITY.md).
+Instead, follow the process described in [SECURITY.md](SECURITY.md) to report security issues responsibly.
 
 ### Reporting Bugs
 For non-security related bugs, please open a GitHub issue and use the **Bug Report** [template](.github/ISSUE_TEMPLATE/bug_report.md).

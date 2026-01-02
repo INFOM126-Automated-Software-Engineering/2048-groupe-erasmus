@@ -1,0 +1,78 @@
+# Contributing to 2048
+
+Thank you for contributing! Please follow these guidelines:
+
+## Reporting Issues
+
+### Bug Reports
+- Use the **Bug Report template**: `.github/ISSUE_TEMPLATE/bug_report.md`
+- Include:
+  - Steps to reproduce
+  - Expected and actual behavior
+  - Environment (OS, Java version, Maven version)
+- **Do not report security issues here**. See [SECURITY.md](SECURITY.md) for responsible disclosure.
+
+### Feature Requests
+- Use the **Feature Request template**: `.github/ISSUE_TEMPLATE/feature_request.md`
+- Describe:
+  - Feature description
+  - Problem it solves
+  - Proposed solution
+  - Alternatives considered
+
+## Branch Management
+
+- **Main branch**: `main` → always protected, only merge via PR
+- **Feature branches**: `feature/<short-description>` → for new features
+- **Bugfix branches**: `bugfix/<short-description>` → for bug fixes
+- **Release branches**: `release/<version>` → for preparing a release
+- **Hotfix branches**: `hotfix/<version>` → urgent fixes to main
+- Delete branches after merge to keep the repo clean
+- Tag releases following semantic versioning: `vMAJOR.MINOR.PATCH` (e.g., `v1.0.0`)
+
+## Pull Requests
+- Use the **Pull Request template**: `.github/PULL_REQUEST_TEMPLATE.md`
+- Ensure your branch is up to date with `main` before submitting
+- All tests must pass and build must succeed
+- Include documentation updates if relevant
+- **PR Types** :
+    - Bug fix
+    - New feature
+    - Refactoring
+    - Documentation update
+
+
+## Commit Message Convention
+
+Use the **Conventional Commits** style:  
+
+```
+[<scope>]<type>: <subject>
+```
+
+Examples:
+- `[game]fix: correct score calculation`
+- `[ui]feat: add keyboard controls`
+- `[readme]docs: update instructions`
+- `[maven]chore: update dependencies`
+
+Types:
+- `feat`: new feature
+- `fix`: bug fix
+- `docs`: documentation only
+- `style`: formatting, missing semi-colons, white-space
+- `refactor`: refactoring code
+- `test`: adding or updating tests
+- `chore`: build process or auxiliary tools
+
+## Security
+- If you discover a security vulnerability, **do not open a public issue**
+- Follow the process in [SECURITY.md](SECURITY.md) to report security issues responsibly
+
+
+## Additional Notes
+- Keep PRs focused and small
+- Reference related issues in your PR description
+- Respect commit message conventions
+- Add tests for any new functionality
+- Update documentation when necessary
