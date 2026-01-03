@@ -5,8 +5,10 @@ import be.unamur.game2048.models.Tile;
 
 import java.util.Arrays;
 
+
 /**
- * /!\ NE PAS TESTER /!\ Cette classe peut être utile pour avoir un code de test plus clair.
+ * /!\ NE PAS TESTER /!\
+ * Cette classe peut être utile pour avoir un code de test plus clair.
  */
 public class GridHelper {
 

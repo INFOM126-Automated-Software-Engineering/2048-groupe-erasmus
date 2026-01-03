@@ -7,8 +7,9 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- * /!\ NE PAS TESTER CETTE CLASSE /!\ Classe principale pour démarrer le jeu. Inspiré de
- * http://www.rosettacode.org/wiki/2048#Java
+ * /!\ NE PAS TESTER CETTE CLASSE /!\
+ * Classe principale pour démarrer le jeu.
+ * Inspiré de http://www.rosettacode.org/wiki/2048#Java
  */
 
 public class Game {
@@ -29,3 +30,4 @@ public class Game {
         });
     }
 }
+

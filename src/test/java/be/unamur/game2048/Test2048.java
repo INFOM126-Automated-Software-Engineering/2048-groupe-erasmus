@@ -55,8 +55,9 @@ public class Test2048 {
         assertFalse(tile1.equals(null));
     }
 
+
     @Test
-    public void testTileSetMergedFalse() {
+    public void testTileSetMergedFalse(){
         // Arrange
         Tile tile1 = new Tile(2);
 
@@ -65,7 +66,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileSetMergedTrue() {
+    public void testTileSetMergedTrue(){
         // Arrange
         Tile tile1 = new Tile(2);
 
@@ -77,7 +78,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileTostringWithGetValue() {
+    public void testTileTostringWithGetValue(){
         // Arrange
         Integer val = 2;
         Tile tile1 = new Tile(val);
@@ -87,7 +88,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileTostringNormal() {
+    public void testTileTostringNormal(){
         // Arrange
         Integer val = 2;
         Tile tile1 = new Tile(val);
@@ -97,7 +98,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileCanMergeWithSame() {
+    public void testTileCanMergeWithSame(){
         // Arrange
         Tile tile1 = new Tile(2);
         Tile tile1_dub = new Tile(2);
@@ -108,7 +109,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileCanMergeWithNull() {
+    public void testTileCanMergeWithNull(){
         // Arrange
         Tile tile1 = new Tile(2);
 
@@ -117,7 +118,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileCanMergeWithAlredyMerged() {
+    public void testTileCanMergeWithAlredyMerged(){
         // Arrange
         Tile tile1 = new Tile(2);
         Tile tile2 = new Tile(2);
@@ -125,12 +126,13 @@ public class Test2048 {
         // Act
         tile2.setMerged(true);
 
+
         // Assert
         assertFalse(tile1.canMergeWith(tile2));
     }
 
     @Test
-    public void testTileCanMergeWithDifferent() {
+    public void testTileCanMergeWithDifferent(){
         // Arrange
         Tile tile1 = new Tile(2);
         Tile tile3 = new Tile(4);
@@ -140,7 +142,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileMergeWithSame() {
+    public void testTileMergeWithSame(){
         // Arrange
         Tile tile1 = new Tile(2);
         Tile tile2 = new Tile(2);
@@ -151,7 +153,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testTileMergeWithDifferent() {
+    public void testTileMergeWithDifferent(){
         // Arrange
         Tile tile1 = new Tile(2);
         Tile tile2 = new Tile(4);
@@ -161,7 +163,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testGridGetLength() {
+    public void testGridGetLength(){
         // Arrange
         Grid grid = new Grid();
         // Assert
@@ -169,24 +171,24 @@ public class Test2048 {
     }
 
     @Test
-    public void testGridDefault() {
+    public void testGridDefault(){
         // Arrange
         Grid grid = new Grid();
         // Assert
-        for (int i = 0; i < grid.getLength(); i++) {
-            for (int j = 0; j < grid.getLength(); j++) {
+        for(int i = 0; i < grid.getLength(); i++){
+            for(int j = 0; j < grid.getLength(); j++){
                 assertNull(grid.getTile(i, j));
             }
         }
     }
 
     @Test
-    public void testGridSetTile() {
+    public void testGridSetTile(){
         // Arrange
         Grid grid = new Grid();
         Tile tile1 = new Tile(4);
         Tile tile2 = new Tile(4);
-        // Act
+        //Act
         grid.setTile(2, tile1);
         // Assert
         assertTrue(grid.getTile(2).equals(tile2));
@@ -194,36 +196,37 @@ public class Test2048 {
     }
 
     @Test
-    public void testGridWithTiles() {
+    public void testGridWithTiles(){
         // Arrange
         Tile[][] tiles = new Tile[GameParams.sideLength][GameParams.sideLength];
         Integer[][] values = new Integer[GameParams.sideLength][GameParams.sideLength];
-        for (int i = 0; i < GameParams.sideLength; i++) {
-            for (int j = 0; j < GameParams.sideLength; j++) {
-                tiles[i][j] = new Tile((i * j) + 2);
-                values[i][j] = new Integer((i * j) + 2);
+        for(int i = 0; i < GameParams.sideLength; i++){
+            for(int j = 0; j < GameParams.sideLength; j++){
+                tiles[i][j] = new Tile((i*j)+2);
+                values[i][j] = new Integer((i*j)+2);
             }
         }
         Grid grid = new Grid(tiles);
 
         // Assert
-        for (int i = 0; i < grid.getLength(); i++) {
+        for(int i = 0; i < grid.getLength(); i++){
             assertTrue(GridHelper.rowEqual(grid, i, values[i]));
         }
 
     }
 
     @Test
-    public void testGridGetCol() {
+    public void testGridGetCol(){
         // Arrange
-        Grid grid = new Grid();
+        Grid grid = new Grid( );
         Tile[] tiles = new Tile[GameParams.sideLength];
         Integer[] values = new Integer[GameParams.sideLength];
         // act
-        for (int j = 0; j < GameParams.sideLength; j++) {
-            grid.setTile(4 * j, new Tile((j) + 2));
-            values[j] = new Integer((j) + 2);
+        for(int j = 0; j < GameParams.sideLength; j++){
+            grid.setTile(4*j,new Tile((j)+2));
+            values[j] = new Integer((j)+2);
         }
+
 
         // Assert
         assertTrue(GridHelper.colEqual(grid, 0, values));
@@ -231,41 +234,43 @@ public class Test2048 {
     }
 
     @Test
-    public void testGridGetRow() {
+    public void testGridGetRow(){
         // Arrange
-        Grid grid = new Grid();
+        Grid grid = new Grid( );
         Tile[] tiles = new Tile[GameParams.sideLength];
         Integer[] values = new Integer[GameParams.sideLength];
         // act
-        for (int j = 0; j < GameParams.sideLength; j++) {
-            grid.setTile(j, new Tile((j) + 2));
-            values[j] = new Integer((j) + 2);
+        for(int j = 0; j < GameParams.sideLength; j++){
+            grid.setTile(j,new Tile((j)+2));
+            values[j] = new Integer((j)+2);
         }
+
 
         // Assert
         assertTrue(GridHelper.rowEqual(grid, 0, values));
 
     }
 
+
     @Test
-    public void testGridClearMerged() {
+    public void testGridClearMerged(){
         // Arrange
         Tile[][] tiles = new Tile[GameParams.sideLength][GameParams.sideLength];
         Integer[][] values = new Integer[GameParams.sideLength][GameParams.sideLength];
-        for (int i = 0; i < GameParams.sideLength; i++) {
-            for (int j = 0; j < GameParams.sideLength; j++) {
-                tiles[i][j] = new Tile((i * j) + 2);
-                values[i][j] = new Integer((i * j) + 2);
+        for(int i = 0; i < GameParams.sideLength; i++){
+            for(int j = 0; j < GameParams.sideLength; j++){
+                tiles[i][j] = new Tile((i*j)+2);
+                values[i][j] = new Integer((i*j)+2);
             }
         }
         Grid grid = new Grid(tiles);
-        grid.getTile(2, 2).setMerged(true);
+        grid.getTile(2,2).setMerged(true);
         // Assert
-        assertTrue(grid.getTile(2, 2).isMerged());
+        assertTrue(grid.getTile(2,2).isMerged());
         grid.clearMerged();
 
-        for (int i = 0; i < grid.getLength(); i++) {
-            for (Tile tile : grid.getRow(i)) {
+        for(int i = 0; i < grid.getLength(); i++){
+            for(Tile tile : grid.getRow(i)){
                 assertFalse(tile.isMerged());
             }
         }
@@ -273,7 +278,7 @@ public class Test2048 {
     }
 
     @Test
-    public void testGameControllerGetGameStateDefault() {
+    public void testGameControllerGetGameStateDefault(){
         // Arrange
         GameController gc = new GameController();
 
@@ -282,8 +287,10 @@ public class Test2048 {
 
     }
 
+
+
     @Test
-    public void testGameControllerStartGameDefault() {
+    public void testGameControllerStartGameDefault(){
         // Arrange
         GameController gc = new GameController();
         // Act
