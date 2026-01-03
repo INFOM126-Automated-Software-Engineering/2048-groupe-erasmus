@@ -1,0 +1,44 @@
+name: Release Build
+
+# Déclenchement uniquement sur les tags de release
+on:
+  push:
+    tags:
+      - 'v*'  # ex: v1.0.0
+
+jobs:
+  build:
+    name: Build and Test (Release)
+    runs-on: ubuntu-latest
+
+    steps:
+      # Récupération du code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # nécessaire pour récupérer les tags
+
+      # Installation du JDK
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+          cache: maven
+
+      # Vérifier que le tag est sur main
+      - name: Verify tag is on main
+        run: |
+          git fetch origin main
+          git branch --contains $GITHUB_SHA | grep -q "main"
+
+      # Build + tests Maven
+      - name: Build and run tests
+        run: mvn clean verify
+
+      # Publier les artifacts pour release
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: 2048-jar-${{ github.ref_name }}
+          path: target/*.jar
