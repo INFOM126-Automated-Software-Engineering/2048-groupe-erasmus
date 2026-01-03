@@ -27,3 +27,9 @@ hs_err_pid*
 
 .idea/
 target/
+
+# macOS Finder metadata
+.DS_Store
+
+# Personal files
+todo.md
