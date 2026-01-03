@@ -41,7 +41,7 @@ jobs:
       # Compiler projet
       - name: Build project
         run: |
-          ./mvn clean compile
+          mvn clean compile
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
