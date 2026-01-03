@@ -1,7 +1,9 @@
 # 2048
 <!-- ![Build](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/actions/workflows/ci.yml/badge.svg) -->
 ![Java](https://img.shields.io/badge/Java-11%2B-blue)
-![License](https://img.shields.io/github/license/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus)
+[![Security Policy](https://img.shields.io/badge/security-policy-green.svg)](SECURITY.md)
+[![Dependabot](https://img.shields.io/badge/dependabot-enabled-brightgreen.svg)](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/network/updates)
+[![License](https://img.shields.io/github/license/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus)](LICENSE)
 
 This project is an implementation of the classic **2048** game.
 This **Java** implementation of this game uses **Maven** for build and dependency management automation.
