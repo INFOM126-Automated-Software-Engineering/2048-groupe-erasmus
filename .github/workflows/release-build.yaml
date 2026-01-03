@@ -38,7 +38,7 @@ jobs:
 
       # Publier les artifacts pour release
       - name: Upload release artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 2048-jar-${{ github.ref_name }}
           path: target/*.jar
