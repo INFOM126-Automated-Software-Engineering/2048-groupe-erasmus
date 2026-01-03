@@ -17,6 +17,11 @@
     <!-- Pas de tabulations -->
     <module name="FileTabCharacter"/>
 
+    <!-- Longueur max des lignes -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+
     <!-- Vérifie les imports -->
     <module name="TreeWalker">
 
@@ -28,11 +33,6 @@
             <property name="ordered" value="true"/>
             <property name="separated" value="true"/>
             <property name="option" value="top"/>
-        </module>
-
-        <!-- Longueur max des lignes -->
-        <module name="LineLength">
-            <property name="max" value="120"/>
         </module>
 
         <!-- Accolades obligatoires -->
