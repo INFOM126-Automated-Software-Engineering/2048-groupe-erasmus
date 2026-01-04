@@ -30,12 +30,6 @@ jobs:
           java-version: '11'
           cache: maven
 
-      # Vérifier que le tag est sur main
-      # - name: Verify tag is on main
-      #   run: |
-      #     git fetch origin main
-      #     git branch --contains $GITHUB_SHA | grep -q "main"
-
       # Build + tests Maven
       - name: Build and run tests
         run: mvn --batch-mode clean verify
