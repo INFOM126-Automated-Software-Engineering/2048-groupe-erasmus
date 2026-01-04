@@ -1,5 +1,5 @@
 # 2048
-<!-- ![Build](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/actions/workflows/ci.yml/badge.svg) -->
+![Build](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/actions/workflows/release-build.yml/badge.svg)
 ![Java](https://img.shields.io/badge/Java-11%2B-blue)
 [![Security Policy](https://img.shields.io/badge/security-policy-green.svg)](SECURITY.md)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-brightgreen.svg)](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/network/updates)
