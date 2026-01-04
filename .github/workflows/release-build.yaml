@@ -38,7 +38,11 @@ jobs:
 
       # Build + tests Maven
       - name: Build and run tests
-        run: mvn clean verify
+        run: mvn --batch-mode clean verify
+
+      # Vérifier l'existance de les artfacts
+      - name: List target directory
+        run: ls -lh target
 
       # Publier les artifacts pour release
       - name: Upload release artifacts
