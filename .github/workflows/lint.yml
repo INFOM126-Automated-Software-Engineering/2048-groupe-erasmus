@@ -27,4 +27,4 @@ jobs:
 
       # Analyse du code
       - name: Run Checkstyle
-        run: mvn checkstyle:check
+        run: mvn -Pci checkstyle:check
