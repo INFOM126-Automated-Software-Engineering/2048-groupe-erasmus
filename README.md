@@ -2,6 +2,7 @@
 ![Build](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/actions/workflows/release-build.yml/badge.svg)
 ![Java](https://img.shields.io/badge/Java-11%2B-blue)
 [![Security Policy](https://img.shields.io/badge/security-policy-green.svg)](SECURITY.md)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=INFOM126-Automated-Software-Engineering_2048-groupe-erasmus&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=INFOM126-Automated-Software-Engineering_2048-groupe-erasmus)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-brightgreen.svg)](https://github.com/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus/network/updates)
 [![License](https://img.shields.io/github/license/INFOM126-Automated-Software-Engineering/2048-groupe-erasmus)](LICENSE)
 
