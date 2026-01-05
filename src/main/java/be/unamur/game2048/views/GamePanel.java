@@ -128,6 +128,7 @@ public class GamePanel extends JPanel {
 
         int x = 215 + c * 121 + (106 - fm.stringWidth(s)) / 2;
         int y = 115 + r * 121 + (asc + (106 - (asc + dec)) / 2);
+        // some bug fix
 
         g.drawString(s, x, y);
     }
